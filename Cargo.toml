@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "03-setup"
+]
+resolver = "2"

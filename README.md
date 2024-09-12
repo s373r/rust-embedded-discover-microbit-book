@@ -4,7 +4,6 @@ Course link: https://docs.rust-embedded.org/discovery/microbit/index.html
 
 Status: 🚧 (WIP)
 
-
 ### Index legend
 
 - 📝 - a link to a book page
@@ -12,15 +11,15 @@ Status: 🚧 (WIP)
 
 ## Index
 
-- [🚧 0. Introduction](https://docs.rust-embedded.org/discovery/microbit/index.html)
-- [🚧 1. Background](https://docs.rust-embedded.org/discovery/microbit/01-background/index.html)
-- [🚧 2. Hardware/knowledge requirements](https://docs.rust-embedded.org/discovery/microbit/02-requirements/index.html)
-- [🚧 3. Setting up a development environment](https://docs.rust-embedded.org/discovery/microbit/03-setup/index.html)
-    - [🚧 3.1. Linux](https://docs.rust-embedded.org/discovery/microbit/03-setup/linux.html)
-    - [🚧 3.2. Windows](https://docs.rust-embedded.org/discovery/microbit/03-setup/windows.html)
-    - [🚧 3.3. macOS](https://docs.rust-embedded.org/discovery/microbit/03-setup/macos.html)
-    - [🚧 3.4. Verify the installation](https://docs.rust-embedded.org/discovery/microbit/03-setup/verify.html)
-    - [🚧 3.5. Setting up your IDE](https://docs.rust-embedded.org/discovery/microbit/03-setup/IDE.html)
+- [📝 0. Introduction](https://docs.rust-embedded.org/discovery/microbit/index.html)
+- [📝 1. Background](https://docs.rust-embedded.org/discovery/microbit/01-background/index.html)
+- [📝 2. Hardware/knowledge requirements](https://docs.rust-embedded.org/discovery/microbit/02-requirements/index.html)
+- [📝 3. Setting up a development environment](https://docs.rust-embedded.org/discovery/microbit/03-setup/index.html)
+    - [📝 3.1. Linux](https://docs.rust-embedded.org/discovery/microbit/03-setup/linux.html)
+    - [📝 3.2. Windows](https://docs.rust-embedded.org/discovery/microbit/03-setup/windows.html)
+    - [📝 3.3. macOS](https://docs.rust-embedded.org/discovery/microbit/03-setup/macos.html)
+    - [📝 3.4. Verify the installation](https://docs.rust-embedded.org/discovery/microbit/03-setup/verify.html)
+    - [📝 3.5. Setting up your IDE](https://docs.rust-embedded.org/discovery/microbit/03-setup/IDE.html)
 - [🚧 4. Meet your hardware](https://docs.rust-embedded.org/discovery/microbit/04-meet-your-hardware/index.html)
     - [🚧 4.1. micro:bit v2](https://docs.rust-embedded.org/discovery/microbit/04-meet-your-hardware/microbit-v2.html)
     - [🚧 4.2. micro:bit v1](https://docs.rust-embedded.org/discovery/microbit/04-meet-your-hardware/microbit-v1.html)
@@ -39,7 +38,8 @@ Status: 🚧 (WIP)
 - [🚧 7. UART](https://docs.rust-embedded.org/discovery/microbit/07-uart/index.html)
     - [🚧 7.1. Send a single byte](https://docs.rust-embedded.org/discovery/microbit/07-uart/send-a-single-byte.html)
     - [🚧 7.2. Send a string](https://docs.rust-embedded.org/discovery/microbit/07-uart/send-a-string.html)
-    - [🚧 7.3. Naive approach and `write!`](https://docs.rust-embedded.org/discovery/microbit/07-uart/naive-approch-write.html)
+    - [🚧 7.3. Naive approach and
+      `write!`](https://docs.rust-embedded.org/discovery/microbit/07-uart/naive-approch-write.html)
     - [🚧 7.4. Receive a single byte](https://docs.rust-embedded.org/discovery/microbit/07-uart/receive-a-single-byte.html)
     - [🚧 7.5. Echo server](https://docs.rust-embedded.org/discovery/microbit/07-uart/echo-server.html)
     - [🚧 7.6. Reverse a string](https://docs.rust-embedded.org/discovery/microbit/07-uart/reverse-a-string.html)
@@ -69,5 +69,6 @@ Status: 🚧 (WIP)
 - [🚧 12. What's left for you to explore](https://docs.rust-embedded.org/discovery/microbit/explore.html)
 
 ---
+
 - [🚧 Appendix 1. General troubleshooting](https://docs.rust-embedded.org/discovery/microbit/appendix/1-general-troubleshooting/index.html)
 - [🚧 Appendix 2. How to use GDB](https://docs.rust-embedded.org/discovery/microbit/appendix/2-how-to-use-gdb/index.html)
