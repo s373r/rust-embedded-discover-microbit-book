@@ -1,0 +1,24 @@
+[package]
+name = "chapter-05-led-roulette"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = ["v2"]
+v1 = ["dep:microbit"]
+v2 = ["dep:microbit-v2"]
+
+[dependencies]
+cortex-m = "0.7.3"
+cortex-m-rt = "0.7.0"
+panic-halt = "0.2.0"
+rtt-target = { version = "0.3.1", features = ["cortex-m"] }
+
+microbit = { optional = true, version = "0.12.0" }
+microbit-v2 = { optional = true, version = "0.12.0" }
+
+[dev-dependencies]
+# Sneak in dependencies for examples which clash with panic-hal when generating
+# docs with rustdoc.
+panic-rtt-target = { version = "0.1.2", features = ["cortex-m"] }
+

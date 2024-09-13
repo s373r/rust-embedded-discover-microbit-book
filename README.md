@@ -4,6 +4,28 @@ Course link: https://docs.rust-embedded.org/discovery/microbit/index.html
 
 Status: 🚧 (WIP)
 
+## Notes
+
+- Get a USB cable that is suitable not only for charging but also for data transfer. No, seriously, otherwise you will
+  have to spend 2 hours debugging like me :wink:
+- To exclude problems with `$ probe-rs info`, it is better to update firmware beforehand.
+- If you get errors like:
+
+```shell
+➜  05-led-roulette git:(main) ✗ cargo embed       
+   Compiling chapter-05-led-roulette v0.1.0 (<REPO_PATH>/rust-embedded-discover-microbit-book/05-led-roulette)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.06s
+      Config default
+      Target <REPO_PATH>/target/thumbv7em-none-eabihf/debug/chapter-05-led-roulette
+ WARN probe_rs::flashing::loader: No loadable segments were found in the ELF file.
+       Error No loadable segments were found in the ELF file.
+```
+
+In that case, make sure that the files [memory.x](05-led-roulette/memory.x), [build.rs](05-led-roulette/build.rs),
+and [Embed.toml](05-led-roulette/Embed.toml) are present inside the chapter folder (e.g. `05-led-roulette`)
+and [.cargo/config.toml](.cargo/config.toml) relative to the
+root of the repository.
+
 ### Index legend
 
 - 📝 - a link to a book page
@@ -20,14 +42,14 @@ Status: 🚧 (WIP)
     - [📝 3.3. macOS](https://docs.rust-embedded.org/discovery/microbit/03-setup/macos.html)
     - [📝 3.4. Verify the installation](https://docs.rust-embedded.org/discovery/microbit/03-setup/verify.html)
     - [📝 3.5. Setting up your IDE](https://docs.rust-embedded.org/discovery/microbit/03-setup/IDE.html)
-- [🚧 4. Meet your hardware](https://docs.rust-embedded.org/discovery/microbit/04-meet-your-hardware/index.html)
-    - [🚧 4.1. micro:bit v2](https://docs.rust-embedded.org/discovery/microbit/04-meet-your-hardware/microbit-v2.html)
-    - [🚧 4.2. micro:bit v1](https://docs.rust-embedded.org/discovery/microbit/04-meet-your-hardware/microbit-v1.html)
-    - [🚧 4.3. Rust Embedded terminology](https://docs.rust-embedded.org/discovery/microbit/04-meet-your-hardware/terminology.html)
-- [🚧 5. LED roulette](https://docs.rust-embedded.org/discovery/microbit/05-led-roulette/index.html)
-    - [🚧 5.1. Build it](https://docs.rust-embedded.org/discovery/microbit/05-led-roulette/build-it.html)
-    - [🚧 5.2. Flash it](https://docs.rust-embedded.org/discovery/microbit/05-led-roulette/flash-it.html)
-    - [🚧 5.3. Debug it](https://docs.rust-embedded.org/discovery/microbit/05-led-roulette/debug-it.html)
+- [📝 4. Meet your hardware](https://docs.rust-embedded.org/discovery/microbit/04-meet-your-hardware/index.html)
+    - [📝 4.1. micro:bit v2](https://docs.rust-embedded.org/discovery/microbit/04-meet-your-hardware/microbit-v2.html)
+    - [📝 4.2. micro:bit v1](https://docs.rust-embedded.org/discovery/microbit/04-meet-your-hardware/microbit-v1.html)
+    - [📝 4.3. Rust Embedded terminology](https://docs.rust-embedded.org/discovery/microbit/04-meet-your-hardware/terminology.html)
+- [📝 5. LED roulette](https://docs.rust-embedded.org/discovery/microbit/05-led-roulette/index.html)
+    - [📝 5.1. Build it](https://docs.rust-embedded.org/discovery/microbit/05-led-roulette/build-it.html)
+    - [📝 5.2. Flash it](https://docs.rust-embedded.org/discovery/microbit/05-led-roulette/flash-it.html)
+    - [📝 5.3. Debug it](https://docs.rust-embedded.org/discovery/microbit/05-led-roulette/debug-it.html)
     - [🚧 5.4. Light it up](https://docs.rust-embedded.org/discovery/microbit/05-led-roulette/light-it-up.html)
     - [🚧 5.5. It blinks](https://docs.rust-embedded.org/discovery/microbit/05-led-roulette/it-blinks.html)
     - [🚧 5.6. The challenge](https://docs.rust-embedded.org/discovery/microbit/05-led-roulette/the-challenge.html)
