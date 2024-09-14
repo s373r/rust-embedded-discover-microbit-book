@@ -33,6 +33,7 @@ root of the repository.
 ### Index legend
 
 - 📝 - a link to a book page
+- ✏️ - a link to an `.rs` file (code)
 - 🚧 - not finished
 
 ## Index
@@ -57,15 +58,17 @@ root of the repository.
     - [📝 5.4. Light it up](https://docs.rust-embedded.org/discovery/microbit/05-led-roulette/light-it-up.html)
     - [📝 5.5. It blinks](https://docs.rust-embedded.org/discovery/microbit/05-led-roulette/it-blinks.html)
     - [📝 5.6. The challenge](https://docs.rust-embedded.org/discovery/microbit/05-led-roulette/the-challenge.html)
+      ([✏️ link](05-led-roulette/src/main.rs))
     - [📝 5.7. My solution](https://docs.rust-embedded.org/discovery/microbit/05-led-roulette/my-solution.html)
 - [📝 6. Serial communication](https://docs.rust-embedded.org/discovery/microbit/06-serial-communication/index.html)
     - [📝 6.1. \*nix tooling](https://docs.rust-embedded.org/discovery/microbit/06-serial-communication/nix-tooling.html)
     - [📝 6.2. Windows tooling](https://docs.rust-embedded.org/discovery/microbit/06-serial-communication/windows-tooling.html)
 - [📝 7. UART](https://docs.rust-embedded.org/discovery/microbit/07-uart/index.html)
     - [📝 7.1. Send a single byte](https://docs.rust-embedded.org/discovery/microbit/07-uart/send-a-single-byte.html)
-    - [📝 7.2. Send a string](https://docs.rust-embedded.org/discovery/microbit/07-uart/send-a-string.html)
+      ([✏️ link (commit)](https://github.com/s373r/rust-embedded-discover-microbit-book/blob/066476b8e3bab5bd198204ee4d0e395a8f5352f1/07-uart/src/main.rs))
+    - [📝 7.2. Send a string](https://docs.rust-embedded.org/discovery/microbit/07-uart/send-a-string.html) ([✏️ link (commit)](https://github.com/s373r/rust-embedded-discover-microbit-book/blob/0c42b65dc18bee38a7e793d918f97f2882980834/07-uart/src/main.rs))
     - [📝 7.3. Naive approach and
-      `write!`](https://docs.rust-embedded.org/discovery/microbit/07-uart/naive-approch-write.html)
+      `write!`](https://docs.rust-embedded.org/discovery/microbit/07-uart/naive-approch-write.html) ([✏️ link (commit)](https://github.com/s373r/rust-embedded-discover-microbit-book/blob/2b9c6c33298415590353d74049b2958b4e407728/07-uart/src/main.rs))
     - [🚧 7.4. Receive a single byte](https://docs.rust-embedded.org/discovery/microbit/07-uart/receive-a-single-byte.html)
     - [🚧 7.5. Echo server](https://docs.rust-embedded.org/discovery/microbit/07-uart/echo-server.html)
     - [🚧 7.6. Reverse a string](https://docs.rust-embedded.org/discovery/microbit/07-uart/reverse-a-string.html)
