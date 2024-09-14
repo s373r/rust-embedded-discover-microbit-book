@@ -1,6 +1,7 @@
 #![no_main]
 #![no_std]
 
+use core::fmt::Write;
 use cortex_m_rt::entry;
 use panic_rtt_target as _;
 use rtt_target::rtt_init_print;
@@ -67,7 +68,10 @@ fn main() -> ! {
     // minicom -D /dev/ttyACM0 -b 115200
     // ```
 
-    nb::block!(serial.write(b'X')).unwrap();
+    const SEND_TO_HOST_STR_VALUE: &str = "The quick brown fox jumps over the lazy dog.";
+
+    // NOTE: It's blocking inside
+    serial.write_str(SEND_TO_HOST_STR_VALUE).unwrap();
     nb::block!(serial.flush()).unwrap();
 
     loop {}
