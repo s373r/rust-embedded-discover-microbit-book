@@ -1,10 +1,9 @@
 #![no_main]
 #![no_std]
 
-use core::fmt::Write;
 use cortex_m_rt::entry;
 use panic_rtt_target as _;
-use rtt_target::rtt_init_print;
+use rtt_target::{rprintln, rtt_init_print};
 
 #[cfg(feature = "v1")]
 use microbit::{
@@ -68,11 +67,10 @@ fn main() -> ! {
     // minicom -D /dev/ttyACM0 -b 115200
     // ```
 
-    const SEND_TO_HOST_STR_VALUE: &str = "The quick brown fox jumps over the lazy dog.\r\n";
+    loop {
+        let byte = nb::block!(serial.read()).unwrap();
+        let maybe_ascii_char = char::from_u32(byte as u32);
 
-    // NOTE: It's blocking inside
-    write!(serial, "{SEND_TO_HOST_STR_VALUE}").unwrap();
-    nb::block!(serial.flush()).unwrap();
-
-    loop {}
+        rprintln!("byte = {:3}, as ASCII char = {:?}", byte, maybe_ascii_char);
+    }
 }

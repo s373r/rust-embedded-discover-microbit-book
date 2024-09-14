@@ -69,7 +69,7 @@ root of the repository.
     - [📝 7.2. Send a string](https://docs.rust-embedded.org/discovery/microbit/07-uart/send-a-string.html) ([✏️ link (commit)](https://github.com/s373r/rust-embedded-discover-microbit-book/blob/0c42b65dc18bee38a7e793d918f97f2882980834/07-uart/src/main.rs))
     - [📝 7.3. Naive approach and
       `write!`](https://docs.rust-embedded.org/discovery/microbit/07-uart/naive-approch-write.html) ([✏️ link (commit)](https://github.com/s373r/rust-embedded-discover-microbit-book/blob/2b9c6c33298415590353d74049b2958b4e407728/07-uart/src/main.rs))
-    - [🚧 7.4. Receive a single byte](https://docs.rust-embedded.org/discovery/microbit/07-uart/receive-a-single-byte.html)
+    - [📝 7.4. Receive a single byte](https://docs.rust-embedded.org/discovery/microbit/07-uart/receive-a-single-byte.html)
     - [🚧 7.5. Echo server](https://docs.rust-embedded.org/discovery/microbit/07-uart/echo-server.html)
     - [🚧 7.6. Reverse a string](https://docs.rust-embedded.org/discovery/microbit/07-uart/reverse-a-string.html)
     - [🚧 7.7. My solution](https://docs.rust-embedded.org/discovery/microbit/07-uart/my-solution.html)
