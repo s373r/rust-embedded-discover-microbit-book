@@ -68,10 +68,10 @@ fn main() -> ! {
     // minicom -D /dev/ttyACM0 -b 115200
     // ```
 
-    const SEND_TO_HOST_STR_VALUE: &str = "The quick brown fox jumps over the lazy dog.";
+    const SEND_TO_HOST_STR_VALUE: &str = "The quick brown fox jumps over the lazy dog.\r\n";
 
     // NOTE: It's blocking inside
-    serial.write_str(SEND_TO_HOST_STR_VALUE).unwrap();
+    write!(serial, "{SEND_TO_HOST_STR_VALUE}").unwrap();
     nb::block!(serial.flush()).unwrap();
 
     loop {}

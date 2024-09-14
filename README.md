@@ -63,8 +63,8 @@ root of the repository.
     - [📝 6.2. Windows tooling](https://docs.rust-embedded.org/discovery/microbit/06-serial-communication/windows-tooling.html)
 - [📝 7. UART](https://docs.rust-embedded.org/discovery/microbit/07-uart/index.html)
     - [📝 7.1. Send a single byte](https://docs.rust-embedded.org/discovery/microbit/07-uart/send-a-single-byte.html)
-    - [🚧 7.2. Send a string](https://docs.rust-embedded.org/discovery/microbit/07-uart/send-a-string.html)
-    - [🚧 7.3. Naive approach and
+    - [📝 7.2. Send a string](https://docs.rust-embedded.org/discovery/microbit/07-uart/send-a-string.html)
+    - [📝 7.3. Naive approach and
       `write!`](https://docs.rust-embedded.org/discovery/microbit/07-uart/naive-approch-write.html)
     - [🚧 7.4. Receive a single byte](https://docs.rust-embedded.org/discovery/microbit/07-uart/receive-a-single-byte.html)
     - [🚧 7.5. Echo server](https://docs.rust-embedded.org/discovery/microbit/07-uart/echo-server.html)
