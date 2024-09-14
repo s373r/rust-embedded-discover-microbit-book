@@ -26,6 +26,10 @@ and [Embed.toml](05-led-roulette/Embed.toml) are present inside the chapter fold
 and [.cargo/config.toml](.cargo/config.toml) relative to the
 root of the repository.
 
+- In Cargo.toml for chapters, the `microbit` (v1) dependency is deliberately commented out and `microbit-v2` is left so
+  that RustRover IDE can understand which crate to take imports from. If you have the first version, you should do the
+  opposite.
+
 ### Index legend
 
 - 📝 - a link to a book page
@@ -53,12 +57,12 @@ root of the repository.
     - [📝 5.4. Light it up](https://docs.rust-embedded.org/discovery/microbit/05-led-roulette/light-it-up.html)
     - [📝 5.5. It blinks](https://docs.rust-embedded.org/discovery/microbit/05-led-roulette/it-blinks.html)
     - [📝 5.6. The challenge](https://docs.rust-embedded.org/discovery/microbit/05-led-roulette/the-challenge.html)
-    - [🚧 5.7. My solution](https://docs.rust-embedded.org/discovery/microbit/05-led-roulette/my-solution.html)
-- [🚧 6. Serial communication](https://docs.rust-embedded.org/discovery/microbit/06-serial-communication/index.html)
-    - [🚧 6.1. \*nix tooling](https://docs.rust-embedded.org/discovery/microbit/06-serial-communication/nix-tooling.html)
-    - [🚧 6.2. Windows tooling](https://docs.rust-embedded.org/discovery/microbit/06-serial-communication/windows-tooling.html)
-- [🚧 7. UART](https://docs.rust-embedded.org/discovery/microbit/07-uart/index.html)
-    - [🚧 7.1. Send a single byte](https://docs.rust-embedded.org/discovery/microbit/07-uart/send-a-single-byte.html)
+    - [📝 5.7. My solution](https://docs.rust-embedded.org/discovery/microbit/05-led-roulette/my-solution.html)
+- [📝 6. Serial communication](https://docs.rust-embedded.org/discovery/microbit/06-serial-communication/index.html)
+    - [📝 6.1. \*nix tooling](https://docs.rust-embedded.org/discovery/microbit/06-serial-communication/nix-tooling.html)
+    - [📝 6.2. Windows tooling](https://docs.rust-embedded.org/discovery/microbit/06-serial-communication/windows-tooling.html)
+- [📝 7. UART](https://docs.rust-embedded.org/discovery/microbit/07-uart/index.html)
+    - [📝 7.1. Send a single byte](https://docs.rust-embedded.org/discovery/microbit/07-uart/send-a-single-byte.html)
     - [🚧 7.2. Send a string](https://docs.rust-embedded.org/discovery/microbit/07-uart/send-a-string.html)
     - [🚧 7.3. Naive approach and
       `write!`](https://docs.rust-embedded.org/discovery/microbit/07-uart/naive-approch-write.html)

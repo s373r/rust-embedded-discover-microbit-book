@@ -2,11 +2,7 @@
 #![no_main]
 
 use cortex_m_rt::entry;
-use microbit::{
-    board::Board,
-    display::blocking::Display,
-    hal::{prelude::*, Timer},
-};
+use microbit::{board::Board, display::blocking::Display, hal::Timer};
 use panic_rtt_target as _;
 use rtt_target::rtt_init_print;
 
@@ -34,6 +30,10 @@ fn main() -> ! {
         display.show(&mut timer, leds, 100);
 
         leds[y as usize][x as usize] = 0;
+
+        // The author of the book offers an interesting solution (and effective), without conditions
+        // (spoiler: using constant tables):
+        // https://docs.rust-embedded.org/discovery/microbit/05-led-roulette/my-solution.html
 
         if x == 4 && dx == 1 {
             dx = 0;

@@ -1,6 +1,8 @@
 [workspace]
 members = [
-    "03-setup",
+    # NOTE: This chapter cannot yet be built, so we are excluding it
+    # "03-setup",
     "05-led-roulette",
+    "07-uart",
 ]
 resolver = "2"
