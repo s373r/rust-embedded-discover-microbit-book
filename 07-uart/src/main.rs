@@ -1,6 +1,7 @@
 #![no_main]
 #![no_std]
 
+use core::fmt::Write;
 use cortex_m_rt::entry;
 use panic_rtt_target as _;
 use rtt_target::{rprintln, rtt_init_print};
@@ -67,10 +68,19 @@ fn main() -> ! {
     // minicom -D /dev/ttyACM0 -b 115200
     // ```
 
+    // Echo server:
     loop {
-        let byte = nb::block!(serial.read()).unwrap();
-        let maybe_ascii_char = char::from_u32(byte as u32);
+        // Receive a byte
+        let received_byte = nb::block!(serial.read()).unwrap();
+        let maybe_ascii_char = char::from_u32(received_byte as u32);
 
-        rprintln!("byte = {:3}, as ASCII char = {:?}", byte, maybe_ascii_char);
+        // Try cast to an ASCII char
+        if let Some(char) = maybe_ascii_char {
+            // Send the char back
+            nb::block!(serial.write(char as u8)).unwrap();
+            nb::block!(serial.flush()).unwrap();
+        } else {
+            rprintln!("Invalid byte received: {}", received_byte);
+        }
     }
 }
