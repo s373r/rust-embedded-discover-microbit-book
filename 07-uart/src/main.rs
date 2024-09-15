@@ -3,6 +3,7 @@
 
 use core::fmt::Write;
 use cortex_m_rt::entry;
+use heapless::Vec;
 use panic_rtt_target as _;
 use rtt_target::{rprintln, rtt_init_print};
 
@@ -68,19 +69,39 @@ fn main() -> ! {
     // minicom -D /dev/ttyACM0 -b 115200
     // ```
 
-    // Echo server:
-    loop {
-        // Receive a byte
-        let received_byte = nb::block!(serial.read()).unwrap();
-        let maybe_ascii_char = char::from_u32(received_byte as u32);
+    const LINE_MAX_LEN: usize = 32;
 
-        // Try cast to an ASCII char
-        if let Some(char) = maybe_ascii_char {
-            // Send the char back
-            nb::block!(serial.write(char as u8)).unwrap();
-            nb::block!(serial.flush()).unwrap();
-        } else {
-            rprintln!("Invalid byte received: {}", received_byte);
+    let mut line: Vec<u8, LINE_MAX_LEN> = Vec::new();
+
+    loop {
+        let received_byte = nb::block!(serial.read()).unwrap();
+
+        match received_byte {
+            // Received an ENTER press, output the reversed line
+            b'\r' => {
+                for c in line.iter().rev() {
+                    nb::block!(serial.write(*c)).unwrap();
+                }
+
+                write!(serial, "\r\n").unwrap();
+
+                line.clear();
+            }
+            // We get any other character, save it
+            _ => {
+                let push_result = line.push(received_byte);
+
+                // The error can be in case of buffer exhaustion
+                if push_result.is_err() {
+                    write!(
+                        serial,
+                        "\r\nThe entered value cannot be longer than {LINE_MAX_LEN} characters!"
+                    )
+                    .unwrap();
+
+                    line.clear();
+                };
+            }
         }
     }
 }
