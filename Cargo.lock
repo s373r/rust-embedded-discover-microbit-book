@@ -101,6 +101,7 @@ dependencies = [
  "cortex-m-rt",
  "embedded-hal",
  "heapless",
+ "lsm303agr",
  "microbit-v2",
  "nb 1.1.0",
  "panic-rtt-target",
@@ -238,6 +239,16 @@ checksum = "07af8b9cdd281b7915f413fa73f29ebd5d55d0d3f0155584dade1ff18cea1b17"
 dependencies = [
  "autocfg",
  "scopeguard",
+]
+
+[[package]]
+name = "lsm303agr"
+version = "0.2.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "aab0b8c3a75dfdebe9f79c738458da139e8111207d176e9fb6b360117432ac4f"
+dependencies = [
+ "embedded-hal",
+ "nb 1.1.0",
 ]
 
 [[package]]

@@ -77,7 +77,7 @@ root of the repository.
     - [📝 8.1. The general protocol](https://docs.rust-embedded.org/discovery/microbit/08-i2c/the-general-protocol.html)
     - [📝 8.2. LSM303AGR](https://docs.rust-embedded.org/discovery/microbit/08-i2c/lsm303agr.html)
     - [📝 8.3. Read a single register](https://docs.rust-embedded.org/discovery/microbit/08-i2c/read-a-single-register.html)
-    - [🚧 8.4. Using a driver](https://docs.rust-embedded.org/discovery/microbit/08-i2c/using-a-driver.html)
+    - [📝 8.4. Using a driver](https://docs.rust-embedded.org/discovery/microbit/08-i2c/using-a-driver.html)
     - [🚧 8.5. The challenge](https://docs.rust-embedded.org/discovery/microbit/08-i2c/the-challenge.html)
     - [🚧 8.6. My solution](https://docs.rust-embedded.org/discovery/microbit/08-i2c/my-solution.html)
 - [🚧 9. LED compass](https://docs.rust-embedded.org/discovery/microbit/09-led-compass/index.html)
