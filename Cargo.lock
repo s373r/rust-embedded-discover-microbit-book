@@ -94,6 +94,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "chapter-08-i2c"
+version = "0.1.0"
+dependencies = [
+ "cortex-m",
+ "cortex-m-rt",
+ "embedded-hal",
+ "heapless",
+ "microbit-v2",
+ "nb 1.1.0",
+ "panic-rtt-target",
+ "rtt-target",
+]
+
+[[package]]
 name = "cortex-m"
 version = "0.7.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"

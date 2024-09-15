@@ -4,5 +4,6 @@ members = [
     # "03-setup",
     "05-led-roulette",
     "07-uart",
+    "08-i2c",
 ]
 resolver = "2"

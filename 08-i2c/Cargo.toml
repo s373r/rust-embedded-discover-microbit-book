@@ -1,0 +1,23 @@
+[package]
+name = "chapter-08-i2c"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = ["v2"]
+# NOTE: Commented out to unblock autocomplete in RustRover IDE
+# v1 = ["dep:microbit"]
+v2 = ["dep:microbit-v2"]
+
+[dependencies]
+cortex-m = "0.7.3"
+cortex-m-rt = "0.7.0"
+embedded-hal = "0.2.6"
+heapless = "0.7.10"
+nb = "1.0.0"
+panic-rtt-target = { version = "0.1.2", features = ["cortex-m"] }
+rtt-target = { version = "0.3.1", features = ["cortex-m"] }
+
+# NOTE: Commented out to unblock autocomplete in RustRover IDE
+# microbit = { optional = true, version = "0.12.0" }
+microbit-v2 = { optional = true, version = "0.12.0" }
